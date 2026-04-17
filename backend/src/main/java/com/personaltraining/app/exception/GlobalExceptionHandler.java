@@ -45,7 +45,12 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleUnexpected(Exception exception) {
-        return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Internal server error", exception.getMessage(), Map.of());
+        return buildResponse(
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "Internal server error",
+                "An unexpected error occurred",
+                Map.of()
+        );
     }
 
     private ResponseEntity<ErrorResponse> buildResponse(
