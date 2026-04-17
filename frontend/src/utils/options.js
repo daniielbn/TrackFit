@@ -1,0 +1,3 @@
+export const SPORT_TYPES = ['RUNNING', 'CYCLING', 'WALKING', 'GYM', 'OTHER'];
+
+export const WORKOUT_STATUSES = ['PENDING', 'DONE', 'CANCELLED'];
